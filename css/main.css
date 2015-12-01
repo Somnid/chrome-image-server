@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+html {
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+}
+#server-info {
+  -webkit-user-select: text;
+  display: block;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+#server-input {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#server-input input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 20px;
+  display: block;
+  width: 50px;
+}
+#server-input input:last-child{
+  margin-right: 0px;
+}
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+button {
+  background: #0000ee;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+}
+button.invalid {
+  background: #ee0000;
+}
+button.valid {
+  background: #00ee00;
+}
+button.waiting {
+  background: #ccc;
+  cursor: none;
+  user-events: none;
+}
+button.invalid::after {
+  content : "";
+  background-image: url(data:image/svg+xml;utf8,<svg width="20" height="20"><path d="M0,0L20,20M0,20L20,0" stroke-width="3" stroke-color="red"></svg>);
+}
